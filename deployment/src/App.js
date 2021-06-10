@@ -3,7 +3,7 @@ import "./App.css";
 
 function url(path) {
   return process.env.NODE_ENV === "development"
-    ? `http://localhost:9000${path}`
+    ? `https://rickandmortyapi.com${path}`
     : path;
 }
 
