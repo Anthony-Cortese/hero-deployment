@@ -3,7 +3,7 @@ import "./App.css";
 
 function url(path) {
   return process.env.NODE_ENV === "development"
-    ? `https://rickandmortyapi.com${path}`
+    ? `http://localhost:9000${path}`
     : path;
 }
 
@@ -11,7 +11,7 @@ function App() {
   const [data, setData] = useState("");
 
   useEffect(() => {
-    fetch(url("/api"))
+    fetch(url("/api/"))
       .then((res) => res.json())
       .then((apiData) => setData(apiData.data));
   }, []);
